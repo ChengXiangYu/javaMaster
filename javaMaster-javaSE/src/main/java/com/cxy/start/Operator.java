@@ -57,6 +57,30 @@ public class Operator {
 		out.println(d1+","+d2);
 		
 		new Operator().getBiggestNum();
+		
+		//按位操作符
+		//＆、｜、^、～
+		//布尔值按照单比特值对待
+		a=6;
+		b=7;
+		out.println("a:"+Integer.toBinaryString(a));
+		out.println("b:"+Integer.toBinaryString(b));
+		out.println("a&b:"+Integer.toBinaryString(a&b)+":"+(a&b));
+		out.println("a|b:"+Integer.toBinaryString(a|b)+":"+(a|b));
+		out.println("a^b:"+Integer.toBinaryString(a^b)+":"+(a^b));
+		out.println("~a:"+Integer.toBinaryString(~a)+":"+(~a));
+		
+		//移位操作符.移位操作符只能操作整形
+		//byte或者short值进行右移操作得到可能不是正确的结果，因为它会自动转换为int类型。
+		a=6;
+		out.println(Integer.toBinaryString(a));
+		out.println("左移 a<<3. "+Integer.toBinaryString(a<<2)+".a="+(a<<3));//左移多少位等于乘2的多少次方。
+		a=-3;
+		out.println("右移a>>1."+Integer.toBinaryString(a>>1)+"a="+(a>>1));//右移多少位，除以2的多少次方。
+		a=-3;
+		out.println("右移a>>>1"+Integer.toBinaryString(a>>>8)+"a="+(a>>>1));//无符号右移操作
+	
+		
 	}
 	
 	private void getSpeed(double distance,int times) {
